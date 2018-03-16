@@ -6,7 +6,7 @@ const config = {
 	development: 'proxy',
 	testing: '/',
 }
- 
+
 /**
  * 获取config配置中的请求前置路径
  */
