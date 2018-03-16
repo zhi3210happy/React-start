@@ -61,7 +61,7 @@
 <br>
 
 ## <a name="features">&sect;  precommit</a>
-> 基于 `babel-eslint` 语法校验  
+> 基于 `babel-eslint` 语法校验  (已关闭)
 
 自动校验
 ```js
