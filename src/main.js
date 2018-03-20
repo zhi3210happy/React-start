@@ -4,17 +4,17 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import { AppContainer } from 'react-hot-loader'
 import thunk from 'redux-thunk'
+import logger from 'redux-logger'
 //移动端reset css，可以自行替换
 // import '@/assets/reset-mobile'   
 
 import reducer from '@/reducers'
 import routers from '@/routers'
-// const logger=logger()
 
 const store = createStore(
   reducer,
   {},
-  applyMiddleware(thunk)
+  applyMiddleware(thunk,logger)
 )
 
 const render = Component => {
