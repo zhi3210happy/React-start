@@ -1,3 +1,5 @@
+
+#注意此分支redux中间件为redux-saga，如果不熟悉或者没用过请切换到thunk分支
 # React开发脚手架（内含移动和PC开发常用utils）
 
 <div align="center">

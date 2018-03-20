@@ -10,11 +10,12 @@ import { AppContainer } from 'react-hot-loader'
 import rootSaga from '@/saga'
 import reducer from '@/reducers'
 import routers from '@/routers'
+import logger from 'redux-logger'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
   reducer,
-  applyMiddleware(sagaMiddleware)
+  applyMiddleware(sagaMiddleware,logger)
 )
 let sagaTask = sagaMiddleware.run(function * () {
   yield rootSaga()
