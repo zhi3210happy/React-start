@@ -1,12 +1,15 @@
-const CT_SHOW = 'CT_SHOW'
-const CT_SHOW_REQUEST = 'CT_SHOW_REQUEST'
+import { createAction } from 'easy-action'
 
-const CT_HIDE = 'CT_HIDE'
-const CT_HIDE_REQUEST = 'CT_HIDE_REQUEST'
+const CtShow = createAction('CT_SHOW')
+const CtShowRequest = createAction('CT_SHOW_REQUEST')
 
-export {
-  CT_HIDE,
-  CT_HIDE_REQUEST,
-  CT_SHOW,
-  CT_SHOW_REQUEST
+const CtHide = createAction('CT_HIDE')
+const CtHideRequest = createAction('CT_HIDE_REQUEST')
+
+
+export default{
+  CtShow,
+  CtHideRequest,
+  CtHide,
+  CtShowRequest
 }

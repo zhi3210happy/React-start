@@ -1,18 +1,16 @@
-import {
-  INCREMENT,
-  INCREMENT_IF_ODD,
-  DECREMENT
-} from '@/const/actions'
-
-export default function counter (state = 0, action) {
-  switch (action.type) {
-    case INCREMENT:
-      return state + 1
-    case INCREMENT_IF_ODD:
-      return (state % 2 !== 0) ? state + 1 : state
-    case DECREMENT:
-      return state - 1
-    default:
-      return state
-  }
+//此处为新写法
+import { handleActions } from 'easy-action'
+const initialState={
+  count:0
 }
+export default handleActions({
+  INCREMENT(state,action){
+    return Object.assign({}, state, {count: state.count + 1})
+   },
+  INCREMENT_IF_ODD(state,action){
+    return Object.assign({},state,{count:(state.count % 2 !== 0) ? state.count + 1 : state.count})
+  },
+  DECREMENT(state,action) {
+    return Object.assign({}, state, {count: state.count - 1})
+  }
+},initialState)

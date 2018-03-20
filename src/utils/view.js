@@ -8,7 +8,7 @@
  *
  */
 
-import connect from 'src/redux/connect'
+import connect from './connect'
 import qs from 'qs'
 
 const VIEW = Comp => {

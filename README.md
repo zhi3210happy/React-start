@@ -102,7 +102,7 @@ npm run fix
 │   ├─ utils/           # 公用方法封装提取
 │   │  ├─http           # aixos请求封装            
 │   │  ├─fetch          # fetch封装（一般用aioxs，这个做备用）            
-│   │  ├─view           # 视图用的高阶组件，连接redux和方便获取URL信息（方便而已，可不用）            
+│   │  ├─view           # 高阶组件，连接redux和方便获取URL信息（默认是采用withRouter）    
 │   │  ├─connect        # 连接redux装饰器封装          
 │   │  ├─asyncComponent # 异步组件            
 │   │  ├─bundle         # 代码分割组件            

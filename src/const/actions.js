@@ -1,12 +1,18 @@
-const INCREMENT = 'INCREMENT' // 增加
-const DECREMENT = 'DECREMENT' // 减少
-const INCREMENT_IF_ODD = 'INCREMENT_IF_ODD'
-const INCREMENT_ASYNC = 'INCREMENT_ASYNC'
-const INCREMENT_ASYNC_ONCE = 'INCREMENT_ASYNC_ONCE'
-export {
-  INCREMENT,
-  INCREMENT_IF_ODD,
-  DECREMENT,
-  INCREMENT_ASYNC,
-  INCREMENT_ASYNC_ONCE
+import { createAction } from 'easy-action'
+const Increment = createAction('INCREMENT') // 增加
+const Decrement = createAction('DECREMENT') // 减少
+const IncrementIfOdd = createAction('INCREMENT_IF_ODD')
+const IncrementAsync =createAction('INCREMENT_ASYNC')
+const IncrementAsyncOnce =createAction('INCREMENT_ASYNC_ONCE')
+const ProxyWeather=createAction('GET_WEATHER_PROXY')
+
+
+
+export default{
+  Increment,
+  IncrementIfOdd ,
+  Decrement,
+  IncrementAsync ,
+  IncrementAsyncOnce,
+  ProxyWeather
 }

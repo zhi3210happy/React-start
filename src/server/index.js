@@ -15,9 +15,9 @@ function getSceneInfo (id) {
     })
 }
 
-function proxyWeather () {
+function proxyWeather (param) {
   return axios({
-    url: '/weather'
+    url: `/weather/${param}`
   })
     .then(res => {
       return res

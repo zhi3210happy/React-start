@@ -1,3 +1,4 @@
+//此处为传统reducer写法。
 const STATE = {
   show: false
 }

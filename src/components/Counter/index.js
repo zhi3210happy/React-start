@@ -8,33 +8,33 @@ class Counter extends Component {
     this.clickHandle = this.clickHandle.bind(this)
   }
   clickHandle () {
-    let { onIncrement } = this.props
+    let { Increment } = this.props
     console.log('没毛病')
-    onIncrement()
+    Increment()
   }
   render () {
     console.log('render count component')
-    let { counter, onDecrement, onIncrementAsync, onIncrementAsyncOnce, onProxyWeather } = this.props
+    let { count, Decrement, IncrementAsync, IncrementAsyncOnce, ProxyWeather } = this.props
     return (
       <div>
         <button onClick={this.clickHandle}>
               Increment
         </button>
         {' '}
-        <button onClick={onDecrement}>
+        <button onClick={Decrement}>
               Decrement
         </button>
         {' '}
-        <button onClick={onIncrementAsync}>
+        <button onClick={IncrementAsync}>
               IncrementAsync
         </button>
         {' '}
-        <button onClick={onIncrementAsyncOnce}>
+        <button onClick={IncrementAsyncOnce}>
               IncrementAsyncOnce
         </button>
-        <button onClick={onProxyWeather}>调用天气接口测试代理功能</button>
+        <button onClick={ProxyWeather}>调用接口测试代理功能</button>
         <hr />
-        <div>Clicked: <span style={{fontSize: '20px', color: 'red'}}> {counter} </span>times</div>
+        <div>Clicked: <span style={{fontSize: '20px', color: 'red'}}> {count} </span>times</div>
       </div>
     )
   }
