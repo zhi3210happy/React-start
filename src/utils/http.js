@@ -1,10 +1,12 @@
 import axios from 'axios'
-import { clearToken, toLogin } from 'src/utils/token'
+import {clearToken,toLogin } from './token'
 
+//可以配置不同环境下baseUrl
 const config = {
 	production: '/',
-	development: 'proxy',
-	testing: '/',
+	// development: 'proxy',
+	development:'/',
+	test: '/',
 }
 
 /**
@@ -28,6 +30,7 @@ const http = axios.create({
  * 请求拦截器，在发起请求之前
  */
 http.interceptors.request.use(config => {
+	console.log(config)
 	return config
 })
 
@@ -37,7 +40,7 @@ http.interceptors.request.use(config => {
  */
 http.interceptors.response.use(config => {
 	// 响应正常
-	if (config.data.resCode === 'xxxx') {
+	if (config.data.resCode === '000') {
 		return config.data.data
 	}
 	// 需要登录（没登录或登录过期）

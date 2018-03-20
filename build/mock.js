@@ -3,6 +3,7 @@ function Mock(app){
     let sceneId = req.query.sceneId
     res.json({
       status: 0,
+      resCode:'000',
       message: '数据请求成功，请查看data字段',
       data: {
         sceneName: '西餐厅偶遇',

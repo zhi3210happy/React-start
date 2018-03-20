@@ -97,10 +97,18 @@ npm run fix
 │   ├─ containers/      # 容器
 │   ├─ reducers/        # 函数因子
 │   ├─ routers/         # 路由
-│   ├─ saga/            # 路由视图基页（VIEW）
+│   ├─ saga/            # redux-saga逻辑
 │   ├─ server/          # 网络请求提取
 │   ├─ utils/           # 公用方法封装提取
-│   ├─ main.js         # 主入口文件
+│   │  ├─http           # aixos请求封装            
+│   │  ├─fetch          # fetch封装（一般用aioxs，这个做备用）            
+│   │  ├─view           # 视图用的高阶组件，连接redux和方便获取URL信息（方便而已，可不用）            
+│   │  ├─connect        # 连接redux装饰器封装          
+│   │  ├─asyncComponent # 异步组件            
+│   │  ├─bundle         # 代码分割组件            
+│   │  ├─token          # token存取封装            
+│   │  ├─asyncPreLogin  # 异步Login（\(^o^)/~有需要可以使用，没有需要就删掉）            
+│   ├─ main.js          # 主入口文件
 ├── static/             # 放置无需经由 Webpack 处理的静态文件
 ├── test/               # vue-cli产出的测试目录，暂时没有处理，待更
 ├── index.html          # 静态模板页面，开发和build产出，都依赖它
