@@ -31,7 +31,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      "/weather": {
+      "/proxy": {
         target: 'http://47.100.0.4:9090/ele/view/',
         changeOrigin: true
       }

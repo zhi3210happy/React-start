@@ -3,10 +3,9 @@ import {clearToken,toLogin } from './token'
 
 //可以配置不同环境下baseUrl
 const config = {
-	production: '/',
-	// development: 'proxy',
-	development:'/',
-	test: '/',
+	production: 'proxy',
+	development: 'proxy',
+	test: 'proxy',
 }
 
 /**
@@ -29,35 +28,34 @@ const http = axios.create({
 /**
  * 请求拦截器，在发起请求之前
  */
-http.interceptors.request.use(config => {
-	console.log(config)
-	return config
-})
+// http.interceptors.request.use(config => {
+// 	return config
+// })
 
 /**
  * 接口响应拦截器，在接口响应之后,
  * 返回的参数和code值可以根据需求自己修改
  */
-http.interceptors.response.use(config => {
-	// 响应正常
-	if (config.data.resCode === '000') {
-		return config.data.data
-	}
-	// 需要登录（没登录或登录过期）
-	else if (config.data.resCode === 'xxxx' || config.data.resCode === 'xxxxx'){
-		clearToken()
-		toLogin()
-		return false
-	}
-	// reject错误处理
-	return Promise.reject({
-		msg: config
-	})
-}, error => {
-    // reject错误处理
-	return Promise.reject({
-		msg: '系统错误'
-	})
-})
+// http.interceptors.response.use(config => {
+// 	// 响应正常
+// 	if (config.data.resCode === '000') {
+// 		return config.data.data
+// 	}
+// 	// 需要登录（没登录或登录过期）
+// 	else if (config.data.resCode === 'xxxx' || config.data.resCode === 'xxxxx'){
+// 		clearToken()
+// 		toLogin()
+// 		return false
+// 	}
+// 	// reject错误处理
+// 	return Promise.reject({
+// 		msg: config
+// 	})
+// }, error => {
+//     // reject错误处理
+// 	return Promise.reject({
+// 		msg: '系统错误'
+// 	})
+// })
 
 export default http
