@@ -1,3 +1,4 @@
+# 此为thubk分支仅仅采用的是redux-thunk
 # React开发脚手架（内含移动和PC开发常用utils）
 
 <div align="center">
@@ -97,7 +98,6 @@ npm run fix
 │   ├─ containers/      # 容器
 │   ├─ reducers/        # 函数因子
 │   ├─ routers/         # 路由
-│   ├─ saga/            # redux-saga逻辑
 │   ├─ server/          # 网络请求提取
 │   ├─ utils/           # 公用方法封装提取
 │   │  ├─http           # aixos请求封装            
