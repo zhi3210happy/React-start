@@ -1,8 +1,8 @@
 {
-  "name": "react-cli",
+  "name": "react-start",
   "version": "1.1.0",
   "description": "react project based on vue-cli",
-  "author": "brucecham <brucecham@qq.com>",
+  "author": "zhi3210happy <328345551@qq.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
