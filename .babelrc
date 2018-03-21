@@ -22,7 +22,7 @@
       {
         "libraryName": "antd",
         // antd组件的样式文件最好单独引入，不要打包到js中
-        "style": false
+        "style": true
       }
     ]
   ],
