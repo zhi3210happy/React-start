@@ -32,7 +32,7 @@ class Counter extends Component {
         <button onClick={IncrementAsyncOnce}>
               IncrementAsyncOnce
         </button>
-        <button onClick={ProxyWeather}>调用接口测试代理功能</button>
+        <button onClick={()=>ProxyWeather({id:1})}>调用接口测试代理功能</button>
         <hr />
         <div>Clicked: <span style={{fontSize: '20px', color: 'red'}}> {count} </span>times</div>
       </div>

@@ -3,7 +3,7 @@ import {clearToken,toLogin } from './token'
 
 //可以配置不同环境下baseUrl
 const config = {
-	production: 'proxy',
+	production: 'http://127.0.0.1:9090',
 	development: 'proxy',
 	test: 'proxy',
 }

@@ -11,7 +11,7 @@ const _ProxyWeather=createAction('GET_WEATHER_PROXY')
 const ProxyWeather=(payload={})=>async(dispatch,getState)=>{
   const res= await proxyWeather(payload)
   console.log(res)
-  dispatch(_ProxyWeather)
+  dispatch(_ProxyWeather(res.data))
 }
 
 export default{
