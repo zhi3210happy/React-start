@@ -51,6 +51,7 @@
     "redux-form": "^7.2.1",
     "redux-logger": "^3.0.6",
     "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.19.1",
     "stylus": "^0.54.5",

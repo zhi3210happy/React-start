@@ -37,8 +37,8 @@ function * setCountTimerShowRequestSaga () {
   yield takeLatest('CT_SHOW_REQUEST', setCountTimerShowRequest)
 }
 
-function * getProxyWeather () {
-  let Promise = yield API.proxyWeather(1)
+function * getProxyWeather ({payload}) {
+  let Promise = yield API.proxyWeather(payload)
   console.log(Promise)
 }
 
