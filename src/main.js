@@ -13,9 +13,12 @@ import routers from '@/routers'
 import logger from 'redux-logger'
 
 const sagaMiddleware = createSagaMiddleware()
+const Middleware=process.env.NODE_ENV.indexOf('dev')>-1?
+      applyMiddleware(sagaMiddleware,logger):
+      applyMiddleware(sagaMiddleware)
 const store = createStore(
   reducer,
-  applyMiddleware(sagaMiddleware,logger)
+  Middleware
 )
 let sagaTask = sagaMiddleware.run(function * () {
   yield rootSaga()
