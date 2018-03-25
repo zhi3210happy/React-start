@@ -17,6 +17,12 @@
     "react-hot-loader/babel",
     // 增加提案中的 对象展开运算符
     ["transform-object-rest-spread", { "useBuiltIns": true }],
+    //静态类属性
+    ["transform-class-properties", { "spec": true }],
+    //函数bind
+    ["transform-function-bind"],
+    //export extensions
+    ["transform-export-extensions"],
     [
       "import",
       {

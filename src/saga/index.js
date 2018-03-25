@@ -3,7 +3,6 @@ import { put, takeEvery, takeLatest, all } from 'redux-saga/effects'
 import * as API from '@/server'
 
 export function * incrementAsync () {
-  console.log('onIncrementAsync 延时1秒增加')
   yield delay(1000)
   yield put({ type: 'INCREMENT' })
   let Promise = yield API.getSceneInfo(123)
@@ -15,7 +14,6 @@ function * watchIncrementAsyncSaga () {
 }
 
 function * watchIncrementAsyncOnceSaga () {
-  console.log('onIncrementAsyncOnce 同时多次触发仅执行最后一次')
   yield takeLatest('INCREMENT_ASYNC_ONCE', incrementAsync)
 }
 
