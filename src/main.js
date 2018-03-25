@@ -7,7 +7,6 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 //移动端reset css，可以自行替换
 // import '@/assets/reset-mobile'   
-
 import reducer from '@/reducers'
 import routers from '@/routers'
 

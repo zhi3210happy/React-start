@@ -11,6 +11,10 @@ var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var NyanProgressPlugin = require('nyan-progress-webpack-plugin')
 var env = config.build.env
 
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
+
 // 增加各环境判断
 let envMatch = /^build:([a-z]+)$/.exec(process.env.npm_lifecycle_event)
 const __ENV__ = envMatch ? JSON.stringify(envMatch[1]):JSON.stringify('dev')
@@ -62,6 +66,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         ? 'index.html'
         : config.build.index,
       template: 'index.html',
+      favicon: resolve('favicon.ico'),
       inject: true,
       minify: {
         removeComments: true,
