@@ -1,4 +1,4 @@
-# 此为thubk分支仅仅采用的是redux-thunk
+# 此为thunk分支,采用的是redux-thunk
 # React开发脚手架（内含移动和PC开发常用utils）
 
 <div align="center">
