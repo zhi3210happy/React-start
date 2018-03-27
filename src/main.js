@@ -10,12 +10,10 @@ import logger from 'redux-logger'
 import reducer from '@/reducers'
 import routers from '@/routers'
 
-const Middleware=process.env.NODE_ENV.indexOf('dev')>-1?
-      applyMiddleware(thunk,logger):
-      applyMiddleware(thunk)
+
 const store = createStore(
   reducer,
-  Middleware
+  applyMiddleware(thunk,process.env.NODE_ENV.indexOf('dev')>-1?logger:'')
 )
 const render = Component => {
   ReactDOM.render(
