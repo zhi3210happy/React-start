@@ -80,7 +80,6 @@ npm run fix
 <br>
 
 ## <a name="reference">&sect; 参考资料</a>
-* [redux-saga中文站点](http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
 * [react-redux](https://github.com/vue-china/react-redux-starter-kit)
 
 <br>
@@ -94,7 +93,7 @@ npm run fix
 ├─ src/                 # 源码目录
 │   ├─ assets/          # images
 │   ├─ components/      # 组件（COMPONENT）
-│   ├─ const/           # 常量集中管理
+│   ├─ const/           # 常量Action集中管理
 │   ├─ containers/      # 容器
 │   ├─ reducers/        # 函数因子
 │   ├─ routers/         # 路由
@@ -156,46 +155,6 @@ cd dist && sts 8090
 
 <br>
 
-## <a name="features">&sect; 书写建议/性能优化</a> 
-
-### 尽量减少 dom 层级 
-Icon 或empty 等状态显示，可以放在 before 或 after 上，500个『2层DIV』与500个『1层DIV』作对比，在安卓很烂的浏览器上，会相差几百毫秒。 
-
-```html
-<!-- 劣 -->
-<div class="video-card">
-    <div class="video-empty"></div>
-<div>
-
-<!-- 优 -->
-<div class="video-card video-empty">
-<div>
-``` 
-
-### shouldUpdate，只有组件更新时才会重新渲染 
-1. 引入 `pure-render-decorator` ，优化渲染判断(shouleComoonentUpdate)
-
-```js
-import pureRender from "pure-render-decorator"
-class CountTimer extends Component {
-  ...
-}
-export default pureRender(CountTimer)
-```
-
-2. decorator装饰器语法 **推荐用法** 
-
-```js
-import pureRender from "pure-render-decorator"
-@pureRender
-class CountTimer extends Component {
-  ...
-}
-export default CountTimer
-```
-<div align="center">
-  <img src='images/purcompare.png' alt='性能优化后渲染对比' width='500'/>
-</div> 
 
 
 
