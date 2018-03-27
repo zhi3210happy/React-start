@@ -26,7 +26,7 @@
 * Redux 3.7.2
 * React-redux 5.0.6
 * React-router-dom 4.2.2 
-* Redux-saga 0.16.0
+* Redux-thunk 2.2.0
 * Webpack 3.10.0
 * Babel-ESlint + Pre-ommit
 * Axios 0.17.1
@@ -40,14 +40,14 @@
 
 * React、Redux 全家桶
 * React-router-dom 路由
-* Redux-saga 实用工具
+* Redux-thunk 实用工具
 * 路由分割和异步组件(utils内)
 * sass less stylus
 * token
 * redux-form 表单实例  
 * Hmr 热替换  
 * vendor-trunk 拆分打包  
-* Axios 网络请求（内有 fetch，可自行切换）
+* Axios 网络请求（utils内有 fetch，可自行切换）
 * Mock 数据API接口
 * Css Modules `config/index.js cssModule:false` 默认关闭(建议团队规范化命名)  
 <!-- * ESlint `git` 提交时候，语法规则自动校验   -->
@@ -197,30 +197,7 @@ export default CountTimer
   <img src='images/purcompare.png' alt='性能优化后渲染对比' width='500'/>
 </div> 
 
-### 传参及赋值，减少解构 
 
-```html
-<!-- 劣 -->
-<div {...videoData}></div>
 
-<!-- 优 -->
-<div data={videoData}></div>
-```
-
-### 循环语句 
-
-1. 纯循环，用forEach，不要用map，map会返回一个数组，性能并不快 
-2. 双层循环，涉及到查找的，不要用二维数组，可以用对象来快速定位，并用Object.keys()取到key进行循环 
-3. try {} catch (e) {} 退出forEach循环 (退出forEach的hanck方法，慎用)
-
-```js
-try {
- this.contentTmpList.forEach((item, index) => {
-    if (index > 1) {
-        throw new Error('')
-    }
- })
-} catch (e) {}
-```
 
 
