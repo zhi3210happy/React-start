@@ -15,9 +15,7 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
   </div>
 )
 
-class SimpleForm extends React.Component {
-  render () {
-    const { error, handleSubmit, pristine, reset, submitting, onSubmit } = this.props
+const  SimpleForm = ({ error, handleSubmit, pristine, reset, submitting, onSubmit }) => {
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
         <Field
@@ -40,7 +38,6 @@ class SimpleForm extends React.Component {
       </form>
     )
   }
-}
 
 export default reduxForm({
   form: 'submitValidation'

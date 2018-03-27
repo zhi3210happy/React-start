@@ -1,11 +1,10 @@
-import React, {Component} from 'react'
+import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import classNames from 'classnames/bind'
 import styles from './index.styl'
 let cx = classNames.bind(styles)
 
-class App extends Component {
-  render () {
+export default ({children})=>{
     return (
       <div className={cx('app-p-box')}>
         <h1>React Router Saga :)</h1>
@@ -19,10 +18,8 @@ class App extends Component {
           <Link to='/other' replace>Not Found</Link>
         </div>
         <br />
-        {this.props.children}
+        {children}
       </div>
     )
-  }
 }
 
-export default App
