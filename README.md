@@ -125,15 +125,15 @@ npm run fix
 项目下载
 ```
 git clone 
-cd project && yarn
+cd project && yarn/npm i
 ```
 启动开发环境
 ```
-yarn start
+yarn/npm  start
 ```
 构建生产环境代码
 ```
-yarn build
+yarn/npm  build
 ```
 
 <br>
